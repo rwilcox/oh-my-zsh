@@ -38,3 +38,4 @@ alias md='mkdir -p'
 alias rd=rmdir
 
 alias d='dirs -v'
+alias l='tree --dirsfirst -ChAFL 1'
