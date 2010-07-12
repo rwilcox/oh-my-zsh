@@ -1,19 +1,17 @@
 ## fixme - the load process here seems a bit bizarre
 
-unsetopt menu_complete   # do not autoselect the first completion entry
-unsetopt flowcontrol
-setopt auto_menu         # show completion menu on succesive tab press
+unsetopt noautomenu
 setopt complete_in_word
-setopt always_to_end
+unsetopt always_to_end
 
 WORDCHARS=''
 
 autoload -U compinit
-compinit
+compinit -i
 
 zmodload -i zsh/complist
 
-## case-insensitive (all),partial-word and then substring completion
+# case-insensitive (all), partial-word and then substring completion
 if [ "x$CASE_SENSITIVE" = "xtrue" ]; then
   zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
   unset CASE_SENSITIVE
@@ -37,9 +35,3 @@ if [ -f ~/.ssh/known_hosts ]; then
   zstyle ':completion:*' hosts $( sed 's/[, ].*$//' $HOME/.ssh/known_hosts )
   zstyle ':completion:*:*:(ssh|scp):*:*' hosts `sed 's/^\([^ ,]*\).*$/\1/' ~/.ssh/known_hosts`
 fi
-
-# Complete on history
-#zstyle ':completion:*:history-words' stop yes
-#zstyle ':completion:*:history-words' remove-all-dups yes
-#zstyle ':completion:*:history-words' list false
-#zstyle ':completion:*:history-words' menu yes
