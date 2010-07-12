@@ -30,6 +30,9 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=")"             # At the very end of the prompt
 ZSH_THEME_GIT_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
 ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
 
+ZSH_THEME_RVM_PROMPT_PREFIX="[rvm:"
+ZSH_THEME_RVM_PROMPT_SUFFIX="]"
+
 # Setup the prompt with pretty colors
 setopt prompt_subst
 
