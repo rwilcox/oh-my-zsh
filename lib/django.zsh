@@ -18,3 +18,10 @@ function djapp() {
     echo "from django.contrib import admin\nfrom $1.models import *\n\n" > $1/admin.py
     echo "from django.conf.urls.defaults import *\n\n" > $1/urls.py
 }
+
+function django_new {
+  virtualenv --no-site-packages venv
+  source venv/bin/activate
+  easy_install django 
+  django-admin.py startproject $1
+}
