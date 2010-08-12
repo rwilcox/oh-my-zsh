@@ -1,11 +1,11 @@
-#!/bin/zsh
-
 # Push and pop directories on directory stack
 alias pu='pushd'
 alias po='popd'
 
-alias ss='thin --stats "/thin/stats" start'
-alias devlog='tail -f log/development.log'
+# Basic directory operations
+alias .='pwd'
+alias ...='cd ../..'
+alias -- -='cd -'
 
 # Super user
 alias _='sudo'
@@ -13,5 +13,4 @@ alias _='sudo'
 # Show history
 alias history='fc -l 1'
 
-# TextMate
-alias et='mate . &'
+alias afind='ack-grep -il'
