@@ -34,3 +34,5 @@ function gitcatc () {
 alias ggpull='git pull origin $(current_branch)'
 alias ggpush='git push origin $(current_branch)'
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+
+alias gitcloneclip='git clone `pbpaste`'
