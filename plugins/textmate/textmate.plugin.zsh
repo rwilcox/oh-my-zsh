@@ -12,3 +12,7 @@ function tm() {
   cd $1
   mate $1
 }
+
+function tmohmy {
+  mate ~/.oh-my-zsh
+}

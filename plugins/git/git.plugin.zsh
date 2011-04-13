@@ -26,7 +26,13 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+function gitcatc () {
+  cat .git/config
+}
+
 # these aliases take advangate of the previous function
 alias ggpull='git pull origin $(current_branch)'
 alias ggpush='git push origin $(current_branch)'
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+
+alias gitcloneclip='git clone `pbpaste`'
