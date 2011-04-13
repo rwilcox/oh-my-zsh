@@ -19,3 +19,7 @@ parse_git_dirty () {
 	echo -n "$ZSH_THEME_GIT_PROMPT_CLEAN"
   fi
 }
+
+function gitcatc () {
+  cat .git/config
+}
