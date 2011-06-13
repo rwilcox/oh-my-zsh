@@ -1,6 +1,7 @@
 # ls colors
 autoload colors; colors;
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
+#export LS_COLORS
 
 # Enable ls colors
 if [ "$DISABLE_LS_COLORS" != "true" ]
@@ -30,17 +31,6 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=")"             # At the very end of the prompt
 ZSH_THEME_GIT_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
 ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
 
-ZSH_THEME_RVM_PROMPT_PREFIX="[rvm:"
-ZSH_THEME_RVM_PROMPT_SUFFIX="]"
-
-# mercurial theming default: Variables for theming the mercurial info prompt
-ZSH_THEME_HG_PROMPT_PREFIX="hg:("         # Prefix at the very beginning of the prompt, before the branch name
-ZSH_THEME_HG_PROMPT_SUFFIX=")"             # At the very end of the prompt
-ZSH_THEME_HG_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
-ZSH_THEME_HG_PROMPT_CLEAN=""               # Text to display if the branch is clean
-
 # Setup the prompt with pretty colors
 setopt prompt_subst
 
-# Load the theme
-source "$ZSH/themes/$ZSH_THEME.zsh-theme"
