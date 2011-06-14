@@ -50,12 +50,7 @@ function gitcatc () {
 alias ggpull='git pull origin $(current_branch)'
 compdef ggpull=git
 alias ggpush='git push origin $(current_branch)'
-<<<<<<< HEAD
-alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
-
 alias gitcloneclip='git clone `pbpaste`'
-=======
 compdef ggpush=git
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
 compdef ggpnp=git
->>>>>>> ed990f61ff66a5c409ef2d8a444820cecf098188
